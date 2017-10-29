@@ -14,7 +14,7 @@ namespace guessing_game {
 
             int guess = 0;
 
-            while ( guess != target ) {
+            while ( true ) {
                 Console.Write( "Sinu pakkumine: " );
                 guess = int.Parse( Console.ReadLine() );
 
@@ -26,6 +26,7 @@ namespace guessing_game {
                 }
                 else if ( guess == target ) {
                     Console.WriteLine( "Arvasid numbri ära" );
+                    break;
                 }
             }
 
