@@ -12,18 +12,24 @@ namespace guessing_game {
             Random randGen = new System.Random();
             int target = randGen.Next( 1, 101 );
 
-            Console.Write( "Sinu pakkumine: " );
-            int guess = int.Parse( Console.ReadLine() );
+            int guess = 0;
 
-            if ( guess > target ) {
-                Console.WriteLine( "Minu number on väiksem" );
+            while ( guess != target ) {
+                Console.Write( "Sinu pakkumine: " );
+                guess = int.Parse( Console.ReadLine() );
+
+                if ( guess > target ) {
+                    Console.WriteLine( "Minu number on väiksem" );
+                }
+                else if ( guess < target ) {
+                    Console.WriteLine( "Minu number on suurem" );
+                }
+                else if ( guess == target ) {
+                    Console.WriteLine( "Arvasid numbri ära" );
+                }
             }
-            else if ( guess < target ) {
-                Console.WriteLine( "Minu number on suurem" );
-            }
-            else if ( guess == target ) {
-                Console.WriteLine( "Arvasid numbri ära" );
-            }
+
+            Console.ReadLine();
         }
     }
 }
