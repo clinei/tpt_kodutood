@@ -9,10 +9,11 @@ namespace guessing_game {
         static void Main( string[] args ) {
             Console.WriteLine( "Ma valin välja ühe suvalise numbri vahemikus [1 – 100]. \nProovi see ära arvata" );
 
-            uint target = 54;
+            Random randGen = new System.Random();
+            int target = randGen.Next( 1, 101 );
 
             Console.Write( "Sinu pakkumine: " );
-            uint guess = uint.Parse( Console.ReadLine() );
+            int guess = int.Parse( Console.ReadLine() );
 
             if ( guess > target ) {
                 Console.WriteLine( "Minu number on väiksem" );
