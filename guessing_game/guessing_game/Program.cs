@@ -20,6 +20,9 @@ namespace guessing_game {
             else if ( guess < target ) {
                 Console.WriteLine( "Minu number on suurem" );
             }
+            else if ( guess == target ) {
+                Console.WriteLine( "Arvasid numbri ära" );
+            }
         }
     }
 }
